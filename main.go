@@ -26,7 +26,7 @@ func getPublicReposByOrg() {
 }
 
 func main() {
-	envErr := godotenv.Load(fmt.Sprintf(".env"))
+	envErr := godotenv.Load(".env")
 	if envErr != nil {
 		fmt.Printf("環境変数を読み込めませんでした: %v", envErr)
 	}

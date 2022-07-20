@@ -1,0 +1,14 @@
+linters:
+  enable-all: true
+  disable:
+  - forbidigo
+  - goerr113
+  - lll
+  - godot
+  - godox
+  - golint
+  - testpackage
+  - exhaustivestruct
+  - scopelint
+  - wsl
+  - exhaustruct
