@@ -42,10 +42,12 @@ func main() {
 
 	client := github.NewClient(tc)
 
-	issues, _, err := client.Issues.ListByRepo(ctx, ownerName, repoName, nil)
+	labels, _, err := client.Issues.GetLabel(ctx, ownerName, repoName, "bug")
+	// issues, _, err := client.Issues.ListByRepo(ctx, ownerName, repoName, nil)
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(issues)
-	getPublicReposByOrg()
+	// fmt.Println(issues)
+	fmt.Printf("Label Name: %s", *labels.Name)
+	// getPublicReposByOrg()
 }
