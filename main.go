@@ -31,8 +31,8 @@ func main() {
 		fmt.Printf("環境変数を読み込めませんでした: %v", envErr)
 	}
 
-	repoName := ""
-	ownerName := "VTRyo"
+	repoName := os.Getenv("GITHUB_REPO_NAME")
+	ownerName := os.Getenv("GITHUB_USER_NAME")
 
 	ctx := context.Background()
 	ts := oauth2.StaticTokenSource(
